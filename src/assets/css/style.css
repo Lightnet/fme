@@ -1,0 +1,216 @@
+
+body {
+  margin: 0;
+}
+
+.theme-light {
+  --color-bg:#808080;
+  --color-primary: #999999;
+  --color-secondary: #d9d9d9;
+  --color-accent: #f2f2f2;
+  --font-color: #000000;
+
+  --color-btn-hover: #4d4d4d;
+  --color-btn-active:#999999;
+  --color-btn-focus: #a83232;
+
+  --color-alert:#f44336;
+  --color-success:#4CAF50;
+  --color-info:#2196F3;
+  --color-warning:#ff9800;
+}
+.theme-dark {
+  --color-bg: #000000;
+  --color-btn-hover: #4d4d4d;
+  --color-btn-active: #999999;
+  --color-btn-focus: #cccc00;
+
+  --color-primary: #595959;
+  --color-secondary: #999999;
+  --color-accent: #cccccc;
+  --font-color: #ffffff;
+
+  --color-alert:#800000;
+  --color-success:#008000;
+  --color-info:#33334d;
+  --color-warning:#804d00;
+}
+
+button {
+  color: var(--font-color);
+  background: var(--color-primary);
+  /*padding: 10px 20px;*/
+  padding: 8px 8px;
+  border: 0;
+  /*border-radius: 5px;*/
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /*border: 2px solid #4CAF50;*/ /* Green */
+}
+button:hover{
+  background: var(--color-btn-hover);
+}
+button:active{
+  background: var(--color-btn-active);
+}
+/*odd focue override need fixed color*/
+/*
+button:focus{
+  #outline: none;
+  #background: var(--color-btn-focus);
+}
+*/
+
+button.primary{background-color: var(--color-primary);}
+button.secondary{background-color: var(--color-secondary);}
+button.accent{background-color: var(--color-accent);}
+
+button.alert{background-color: var(--color-alert);}
+button.success{background-color: var(--color-success);}
+button.info{background-color: var(--color-info);}
+button.warning{background-color: var(--color-warning);}
+
+/* alert */
+.alert {
+  padding: 8px;
+  background-color: var(--color-alert);
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  /*display:block;*/
+  display: inline-block;
+  float:right;
+}
+
+.alert.success {background-color: var(--color-success);}
+.alert.info {background-color: var(--color-info);}
+.alert.warning {background-color: var(--color-warning);}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  /*z-index:-10;*/
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+/* toggle swtich */
+
+.toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 62px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+  bottom:-14px;
+  border-radius: 50px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  transition: background-color ease 0.3s;
+}
+
+.toggle:before {
+  content: "on off";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  font: 10px/28px Helvetica;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-indent: -22px;
+  word-spacing: 37px;
+  color: #fff;
+  text-shadow: -1px -1px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+}
+
+.toggle:checked {
+  background-color: var(--color-success);
+}
+
+.toggle:checked:before {
+  left: 32px;
+}
+
+/* MODAL */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  /*margin: auto;*/
+  /*padding: 20px;*/
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* DRAG */
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}

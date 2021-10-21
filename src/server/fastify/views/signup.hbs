@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://redom.js.org/redom.min.js"></script>
+  </head>
+  <body>
+    <label>Sign Up</label>
+    <form action="/signup" method="post">
+      <table>
+        <tr>
+          <td>
+            <label>Alias:</label>
+          </td>
+          <td>
+            <input type="text" name="alias" value="testalias" placeholder="Alias / User Name">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Passphrase #1:</label>
+          </td>
+          <td>
+            <input type="text" name="passphrase1" value="testpass" placeholder="Passphrase / Password">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Passphrase #2:</label>
+          </td>
+          <td>
+            <input type="text" name="passphrase2" value="testpass" placeholder="Passphrase / Password">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="/">Home</a>
+            <button style="float:right;" type="submit">Register</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
